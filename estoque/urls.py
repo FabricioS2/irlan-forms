@@ -18,8 +18,12 @@ from django.contrib import admin
 from django.urls import path
 from produtos import views
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    #path('<int:question_id>', views.details, name='detail'),
-    path('create', views.create, name="create_pull"),
+    path('', views.home, name='home'),
+    path('cadastrar/categoria/', views.cadastrar_categoria, name='cadastrar_categoria'),
+    path('cadastrar/fornecedor/', views.cadastrar_fornecedor, name='cadastrar_fornecedor'),
+    path('cadastrar/produto/', views.cadastrar_produto, name='cadastrar_produto'),
+
 ]
